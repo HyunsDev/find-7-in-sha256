@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/761930839893606400/1024582404905635891/342610ca36b96f08.png?width=562&height=562" width="10%" alt="Hyuns Dash" />
+</p>
+<h1 align="center">find-7-in-sha256</h1>
+<h5 align="center">SHA256에서 7 찾기</h5>
+<p align="center"><ahref='https://find7.hyuns.dev/'>https://find7.hyuns.dev/</a></p>
+<p align="center">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-blue"/></a>
+  <img alt="MIT License" src="https://img.shields.io/badge/Language-Typescript-blue?logo=typescript"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
 
-In the project directory, you can run:
+SHA256을 랜덤으로 찾아서 7의 개수를 찾는 웹사이트입니다.
 
-### `yarn start`
+localstorage에 최대값을 알아서 저장하며, sha를 위한 원 문자열은 "hyuns_(랜덤시드)_카운트" 형식입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+딱히 쓸모있지는 않고, 심심할 때 컴퓨터 돌려두기 괜찮습니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+자습시간에 시간이 남아서 만든거라, 딱히 최적화는 신경 안 썼습니다.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+현재 루프가 `setInterval(func, 0)`으로 돌고 있어 속도가 엄청 느립니다. 혹시 이런 ~~쓸모없는~~ 웹사이트를 만들고 싶으시다면 Web Worker나 WebGPU, WebCL 같은 것을 알아보시면 좋습니다.
